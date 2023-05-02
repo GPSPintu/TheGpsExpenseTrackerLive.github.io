@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The GPS Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+       html,
+       h1 {
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.col-sm-4 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Rest of the CSS */
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: blue;">Gps Expense Tracker</h1>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <form id="form">
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="amount" name="amount" placeholder="Expense Amount" required>
+              <label for="amount">Expense Amount</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
+              <label for="description">Description</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="category" name="category" aria-label="Expense Category" required>
+                <option selected disabled>Choose a Category</option>
+                <option value="Movie">Movie</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Eat">Eat</option>
+                <option value="Recharge">Recharge</option>
+                <option value="EMI">EMI</option>
+                <option value="Others">Others</option>
+              </select>
+              <label for="category">Category</label>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="submit">Add Expense</button>
+            </div>
+          </form>
+          <br>
+          <ul id="expenses"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  <!-- Code injected
